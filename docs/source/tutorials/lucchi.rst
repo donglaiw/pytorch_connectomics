@@ -15,7 +15,7 @@ when executing the ``train.py`` and ``test.py`` scripts. The pytorch dataset cla
 
         .. code-block:: none
 
-            wget https://hp03.mindhackers.org/rhoana_product/dataset/lucchi.zip
+            wget https://hp06.mindhackers.org/rhoana_product/dataset/lucchi.zip
     
     For description of the data please check `the author page <https://www.epfl.ch/labs/cvlab/data/data-em/>`_.
 

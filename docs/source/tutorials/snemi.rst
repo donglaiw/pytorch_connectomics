@@ -19,7 +19,7 @@ All the scripts needed for this tutorial can be found at ``pytorch_connectomics/
 
         .. code-block:: none
 
-            wget http://hp03.mindhackers.org/rhoana_product/dataset/snemi.zip
+            wget http://hp06.mindhackers.org/rhoana_product/dataset/snemi.zip
     
     For description of the data please check `this page <https://vcg.github.io/newbie-wiki/build/html/data/data_em.html>`_.
 
