@@ -20,14 +20,12 @@ def train(args, train_loader, model, criterion,
         pred = model(volume)
         #print(volume.size(), output.size())
        
-        loss += criterion.eval(pred, target, weight)
+        loss = criterion.eval(pred, target, weight)
 
         # compute gradient
-        if (iteration+1) % args.iteration_step == 0:
-            optimizer.zero_grad()
-            loss.backward()
-            loss = 0
-            optimizer.step()
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
 
         # logging and update record
         do_vis = monitor.update(scheduler, iter_total, loss, optimizer.param_groups[0]['lr']) 

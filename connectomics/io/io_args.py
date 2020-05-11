@@ -107,8 +107,6 @@ def get_args(mode='train', do_output=True):
                             help='Total number of iteration')
         parser.add_argument('-isa', '--iteration-save', type=int, default=100,
                             help='Number of iteration to save')
-        parser.add_argument('-ist', '--iteration-step', type=int, default=1,
-                            help='Number of steps to update')
     elif mode == 'test':
         parser.add_argument('-tsd', '--test-stride', type=str, default='',
                             help='stride during inference')
@@ -195,7 +193,7 @@ def get_args(mode='train', do_output=True):
 
         args.mon_log_opt = [int(x) for x in args.mon_log_opt.split(',')]
         args.mon_vis_opt = [int(x) for x in args.mon_vis_opt.split(',')]
-        args.mon_iter_num = np.array([int(x) for x in args.mon_iter_num.split(',')])*args.iteration_step
+        args.mon_iter_num = np.array([int(x) for x in args.mon_iter_num.split(',')])
         
     elif mode == 'test':
         # test stride
